@@ -1,0 +1,33 @@
+<div class="app-container d-flex vh-100">
+  <!-- Left Bar -->
+<!-- app.component.html -->
+
+<router-outlet></router-outlet>
+
+  <app-left-bar></app-left-bar>
+  
+  <!-- Auto-Centering Content -->
+  <div class="main-content ms-sm-auto" [class.ps-sm-3]="!sidebarVisible">
+    
+    <div class="center-container">
+      <h1 class="display-2 fw-bold text-primary border-bottom pb-2 mb-4">Note</h1>
+      
+
+      <input
+        type="text"
+        class="form-control mb-4 pb-2"
+        id="noteInput"
+        placeholder="Write your Title note here..."
+        [(ngModel)]="noteTitle"
+        name="noteTitle"
+      />
+        <!-- Updated textarea with ngModel binding -->
+      <textarea class="auto-textarea" placeholder="Write here..." [(ngModel)]="noteContent"></textarea>
+      
+      <!-- Add Save Button -->
+      <button (click)="saveNote()" class="btn btn-primary mt-3">
+        Save Note
+      </button>
+    </div>
+  </div>
+</div>

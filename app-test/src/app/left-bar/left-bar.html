@@ -1,0 +1,31 @@
+<!-- Toggle Button (visible only on small screens) -->
+<button class="btn btn-primary d-sm-none position-fixed m-2" 
+        (click)="sidebarVisible = !sidebarVisible"
+        >
+  ☰ Notes
+</button>
+
+<!-- Sidebar -->
+<div class="d-sm-flex vh-100 flex-column align-items-center shadow position-fixed bg-light" 
+     [class.d-none]="!sidebarVisible"
+     style="width: 16rem; border-top-right-radius: 20px; z-index: 999;">
+     <button class="btn btn-sm position-absolute end-0 m-2 d-sm-none" 
+     (click)="sidebarVisible = false">
+× 
+</button>
+  <img src="/assets/download.png" alt="Logo" class="mt-4 img-fluid rounded" style="width: 80px;" />  
+  <h1 class="h1 mt-3 border-bottom">Notes</h1>
+  
+  <div class="d-flex flex-column align-items-center gap-3 w-100">
+    <ng-container *ngIf="notes$ | async as notes">
+      <div *ngFor="let note of notes" class="w-100 p-2 rounded hover-bg">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" style="color: red;" fill="currentColor" class="bi bi-fire" viewBox="0 0 16 16">
+          <path d="..."/>
+        </svg>
+        <a [routerLink]="['/shownote', note.id]" class="text-decoration-none text-dark ms-1">
+          {{note.title}}
+        </a>
+      </div>
+    </ng-container>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="app-container d-flex vh-100">
+  <div class="main-content">
+    <div class="center-container">
+      <h1 class="note-title">Your Notes 📝</h1>
+      <div class="notes-container">
+        <div *ngFor="let note of notes$ | async" class="note-card">
+          <!-- Note text -->
+          <div class="note-content">
+
+            {{ note['content'] }}
+          </div>
+          <!-- Note timestamp + delete -->
+          <div class="note-footer">
+            <small>{{ note['createdAt'].toDate() | date:'medium' }}</small>
+            <button (click)="deleteNote(note.id)" class="delete-btn">🗑️</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

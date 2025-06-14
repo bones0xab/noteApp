@@ -1,0 +1,45 @@
+.main-content {
+    flex: 1;
+    margin-left: 16rem; /* Match sidebar width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .center-container {
+    width: 100%;
+    max-width: 600px; /* Adjust max width as needed */
+    text-align: center;
+  }
+  
+  .auto-textarea {
+    width: 100%;
+    min-height: 200px;
+    resize: vertical;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  
+  /* Add this to your existing CSS */
+.btn-primary {
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #115293;
+}
+  /* Responsive adjustment for smaller screens */
+  @media (max-width: 768px) {
+    .main-content {
+      margin-left: 0;
+      padding-top: 60px; /* Prevents overlap with sidebar if collapsed */
+    }
+  }

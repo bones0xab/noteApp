@@ -1,0 +1,39 @@
+<!-- show-note.component.html -->
+<div class="container mt-4">
+    <!-- loading or noteData -->
+    <ng-container *ngIf="note$ | async as noteData; else loading">
+      
+      <!-- Note exists -->
+      <ng-container *ngIf="noteData; else notFound">
+        <div class="card shadow-sm">
+          <div class="card-header bg-primary text-white">
+            <h2 class="card-title mb-0">{{ noteData.title }}</h2>
+          </div>
+          <div class="card-body">
+            <!-- example content property -->
+            <p>{{ noteData.content }}</p>
+          </div>
+        </div>
+      </ng-container>
+  
+    </ng-container>
+  
+    <!-- note not found -->
+    <ng-template #notFound>
+      <div class="alert alert-warning d-flex align-items-center" role="alert">
+        <!-- your SVG icon here… -->
+        <div>Note not found</div>
+      </div>
+    </ng-template>
+  
+    <!-- loading spinner -->
+    <ng-template #loading>
+      <div class="text-center py-5">
+        <div class="spinner-border text-primary" role="status" style="width:3rem; height:3rem">
+          <span class="visually-hidden">Loading…</span>
+        </div>
+        <p class="mt-3">Loading note…</p>
+      </div>
+    </ng-template>
+  </div>
+  

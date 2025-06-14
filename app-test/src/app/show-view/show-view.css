@@ -1,0 +1,39 @@
+.notes-container {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 20px;
+  }
+  
+  .note-card {
+    background-color: #f9f9f9;
+    border-left: 4px solid #4CAF50;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 0 4px 4px 0;
+    position: relative;
+  }
+  
+  .note-content {
+    white-space: pre-wrap; /* Preserve line breaks */
+    margin-bottom: 10px;
+  }
+  
+  .note-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #666;
+    font-size: 0.85rem;
+  }
+  
+  .delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 5px;
+  }
+  
+  .delete-btn:hover {
+    color: #f44336;
+  }

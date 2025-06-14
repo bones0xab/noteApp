@@ -12,5 +12,4 @@ The features :
 ### BootStrap Css
 ### FireBase
 
-# Dashboard
-![image](https://github.com/user-attachments/assets/d579edcb-cf56-4eef-b173-7da1ac859da3)
+

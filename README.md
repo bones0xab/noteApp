@@ -8,6 +8,6 @@ The features :
 ---
 
 # Technologies used :
-## Angular
-## BootStrap Css
-## FireBase
+### Angular
+### BootStrap Css
+### FireBase
